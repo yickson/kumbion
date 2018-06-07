@@ -1,9 +1,6 @@
 ![KumbiaPHP logo](https://rawgit.com/kumbiaphp/kumbiaphp/master/default/public/img/kumbiaphp.svg)
 
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/KumbiaPHP/KumbiaPHP/badges/quality-score.png)](https://scrutinizer-ci.com/g/KumbiaPHP/KumbiaPHP)
-[![Code Climate](https://codeclimate.com/github/KumbiaPHP/KumbiaPHP/badges/gpa.svg)](https://codeclimate.com/github/KumbiaPHP/KumbiaPHP)
 [![Slack](http://slack.kumbiaphp.com/badge.svg)](http://slack.kumbiaphp.com)
-![PHP7 ready](https://rawgit.com/kumbiaphp/kumbiaphp/master/default/public/img/php7.svg)
 
 Fácil, rápido y en español
 (Or should I say fast and easy?)
@@ -11,7 +8,7 @@ Fácil, rápido y en español
 ---
 ## Bienvenidos a KumbiaPHP Framework  Versión 1.0
 
-Manual en construcción de la 1.0:
+Manual de la 1.0:
 
 Español: https://github.com/KumbiaPHP/Documentation/tree/master/es
 
@@ -26,17 +23,21 @@ http://slack.kumbiaphp.com (new)
 * Requiere PHP 5.4 como mínimo, recomendado usar PHP 5.6, 7.0 o 7.1
 * CRUD: http://wiki.kumbiaphp.com/V1.0_CRUD_en_KumbiaPHP_Framework
 
-Comunidad
-===
-* https://www.kumbiaphp.com  Web oficial  (pronto en KumbiaPHP http://proto.kumbiaphp.com, bienvenida ayuda con el diseño).
-* http://wiki.kumbiaphp.com Wiki
-* http://foro.kumbiaphp.com Foro de KumbiaPHP
-* http://groups.google.com/group/kumbia/   Grupo de KumbiaPHP +1.500 programadores
-* https://twitter.com/KumbiaPHP Twitter
-* https://www.facebook.com/kumbia.fw/ Facebook page
-* http://slack.kumbiaphp.com  Slack (nuevo y recomendado)
-* irc://irc.freenode.org/#kumbiaphp  IRC [![Visita nuestro canal IRC channel](https://kiwiirc.com/buttons/irc.freenode.org/kumbiaphp.png)](https://kiwiirc.com/client/irc.freenode.org/?nick=invitado|?&theme=cli#kumbiaphp) Actualmente no usamos el IRC
-* Largo historial de repos durante estos años ;)  cvs(sf.net), svn(sf.net), bzr(launchpad.com) y ahora git(github.com)
+## Sistema de notificación en tiempo real mediante Socket.io
+
+Solamente se requiere que descargues el repositorio nombrar la carpeta como Kumbion
+
+Iniciar el servidor de Apache y MYSQL si estás manejando XAMPP.
+La base de datos se encuentra en la carpeta "BD"
+Crear la base de datos
+Este sistema se encuentra utilizando el Lite Record por si lo quieres cambiar solo debes cambiar tu configuración respectiva
+Una vez tengas listo tu conexión a la base de datos, abrir la consola de comando, ir al directorio de tu proyecto
+Ejecutar comando "node server.js" (Previamente debes tener instalado NodeJS en tu máquina).
+El servidor iniciará en el puerto 3000 por defecto.
+Abrir el navegador y abrir http://localhost/kumbion --> Este dirección envías el mensaje.
+En otra pestaña o navegador abre http://localhost/mensajes --> Esta dirección verás las notificaciones y los mensajes sin recargar la web.
+
+Cualquier duda puedes escribirme al correo yicksonr@gmail.com o ir al Slack de KumbiaPHP casi siempre estoy por allá mi usuario es yickson.
 
 Licencia
 ===
