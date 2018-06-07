@@ -1,0 +1,18 @@
+{
+  "name": "kumbion",
+  "version": "1.0.0",
+  "description": "Aplicación de notificaciones con KumbiaPHP y Socket.io",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "notificacion"
+  ],
+  "author": "Yickson Ramirez",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.1.1"
+  }
+}

@@ -1,0 +1,56 @@
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-xs-12 col-md-6">
+    <h3 class="text-center">Mensaje con SOCKET.io</h3>
+    <form id="enviarMensaje">
+      <fieldset>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Nombre</label>
+          <input type="text" name="nombre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa nombre">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Mensaje</label>
+          <textarea name="mensaje" class="form-control" rows="8" cols="80"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+      </fieldset>
+    </form>
+  </div>
+  <div class="col-md-3"></div>
+</div>
+<script type="text/javascript">
+  $(function(){
+    $("#enviarMensaje").on('submit', function(e){
+      e.preventDefault();
+      let f = $(this);
+      let formulario = new FormData(document.getElementById('enviarMensaje'));
+
+      $.ajax({
+        type: 'post',
+        cache: false,
+        url: '<?php echo PUBLIC_PATH.'mensajes/enviar_mensaje' ?>',
+        data: formulario,
+        processData: false,
+        contentType: false,
+        success: function(datos){
+          console.log(datos);
+          if(datos.resp === true){
+            var socket = io.connect( 'http://'+window.location.hostname+':3000' );
+
+                // socket.emit('new_count_message', {
+                //   new_count_message: data.new_count_message
+                // });
+
+                socket.emit('new_message', {
+                  nombre: datos.nombre,
+                  mensaje: datos.mensaje,
+                  id: datos.id
+                });
+          }else{
+            console.log(datos);
+          }
+        }
+      })
+    })
+  })
+</script>
